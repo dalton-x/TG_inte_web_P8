@@ -1,0 +1,114 @@
+.ks-container, .ks-containerFluid {
+  width: 100%;
+  padding-right: calc(1.5rem * .5);
+  padding-left: calc(1.5rem * .5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.ks-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: calc(-1 * 0);
+  margin-right: calc(-.5 * 1.5rem);
+  margin-left: calc(-.5 * 1.5rem);
+}
+
+.ks-pb0 {
+  padding-bottom: 0 !important;
+}
+.ks-alignItemsCenter {
+  align-items: center !important;
+}
+.ks-alignItemsTop {
+  align-items: flex-start !important;
+}
+.ks-justifyContentCenter {
+  justify-content: center !important;
+}
+
+@media (min-width: 1400px) {
+  .ks-container {
+    max-width: 1320px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1399px){
+  .ks-container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .ks-container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+  .ks-container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 767px) {
+  .ks-container {
+    max-width: 540px;
+  }
+}
+
+.ks-col1 {
+  flex: 0 0 auto;
+  width: 8.33333333%;
+}
+
+.ks-col2 {
+  flex: 0 0 auto;
+  width: 16.66666667%;
+}
+
+.ks-col3 {
+  flex: 0 0 auto;
+  width: 25%;
+}
+
+.ks-col4 {
+  flex: 0 0 auto;
+  width: 33.33333333%;
+}
+
+.ks-col5 {
+  flex: 0 0 auto;
+  width: 41.66666667%;
+}
+
+.ks-col6 {
+  flex: 0 0 auto;
+  width: 50%;
+}
+
+.ks-col7 {
+  flex: 0 0 auto;
+  width: 58.33333333%;
+}
+
+.ks-col8 {
+  flex: 0 0 auto;
+  width: 66.66666667%;
+}
+
+.ks-col9 {
+  flex: 0 0 auto;
+  width: 75%;
+}
+
+.ks-col10 {
+  flex: 0 0 auto;
+  width: 83.33333333%;
+}
+
+.ks-col11 {
+  flex: 0 0 auto;
+  width: 91.66666667%;
+}
+
+.ks-col12 {
+  flex: 0 0 auto;
+  width: 100%;
+}
