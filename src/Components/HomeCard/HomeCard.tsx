@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 
-function HomeCard(logement) {
+function HomeCard(logement: Array<object>) {
 
   return(
     <div className="ks-cardLogement" key={logement.index}>
