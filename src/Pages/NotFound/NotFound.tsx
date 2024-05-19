@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom"
 
 function NotFound() {
+
+  
+  document.title = 'Page non trouvée - Kasa'
+
   return(
     <div className="ks-notFound">
       <div className="ks-notFound-404">
