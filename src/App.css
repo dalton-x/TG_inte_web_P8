@@ -1,4 +1,7 @@
 @import url(./utils/common.css);
 @import url(./utils/layout.css);
+
 @import url(./Components/Header/Header.css);
 @import url(./Components/Footer/Footer.css);
+
+@import url(./Pages/Home/Home.css);
