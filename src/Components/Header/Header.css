@@ -11,11 +11,15 @@ header {
   width: 210.322px;
   height: 68px;
   flex-shrink: 0;
+  position: absolute;
+  left: 0;
 }
 .ks-nav {
   display: flex;
   align-items: flex-start;
   gap: 57px;
+  position: absolute;
+  right: 0;
 }
 .ks-nav-link {
   color: #000;
