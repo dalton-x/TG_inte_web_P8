@@ -1,9 +1,9 @@
 import { useEffect, useState } from "react"
 
-function useFetch(url:string, options={}){
-  const [loading, setLoading] = useState(true)
-  const [data, setData] = useState(null)
-  const [errors, setErrors] = useState('')  
+function useFetch<T>(url: string, options: RequestInit = {}) {
+  const [loading, setLoading] = useState(true);
+  const [response, setResponse] = useState<T | null>(null);
+  const [errors, setErrors] = useState('');
 
   useEffect(() => {
     fetch(url, {
@@ -11,25 +11,25 @@ function useFetch(url:string, options={}){
       headers: {
         'Accept': 'application/json; charset=UTF-8',
         ...options.headers,
-      }
+      },
     })
     .then(response => response.json())
-    .then(data => {
-      setData(data)
+    .then(response => {
+      setResponse(response);
     })
-    .catch(()=> {
-      setErrors('Erreur de chargement des logements')
+    .catch(() => {
+      setErrors('Erreur de chargement des logements');
     })
     .finally(() => {
-      setLoading(false)
-    })
-  }, [])
+      setLoading(false);
+    });
+  }, [url, options]);
 
   return {
-    loading : loading,
-    data: data,
-    errors: errors
-  }
+    loading,
+    data: response,
+    errors,
+  };
 }
 
 export default useFetch

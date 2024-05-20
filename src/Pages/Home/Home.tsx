@@ -1,6 +1,7 @@
-import { Fragment } from "react/jsx-runtime"
 import useFetch from "../../hooks/useFetch"
 import HomeCard from "../../Components/HomeCard/HomeCard"
+import Error from "../../Components/Error/Error"
+import Loading from "../../Components/Loading/Loading"
 
 function Home() {
   const {loading, data, errors} = useFetch('src/data/logements.json')
@@ -8,7 +9,7 @@ function Home() {
   document.title = 'Accueil - Kasa'
   
   return (
-    <Fragment>
+    <div className="ks-home">
       <div className="ks-chezVous">
         <div className="ks-chezVous-img ks-row ks-alignItemsCenter ks-justifyContentCenter">
             <div className="ks-chezVous-Text ks-col12">
@@ -17,32 +18,30 @@ function Home() {
         </div>
       </div>
       <div className="ks-container ks-home">
+        {/* Spinner pour le temps de chargement */}
         {loading &&
-          <div className="ks-row ks-alignItemsCenter ks-justifyContentCenter">
-            <div className="ks-col5 ks-textCenter">
-            <i className="fa-solid fa-spinner fa-spin fa-5x"></i>
-            </div>
-          </div>
+          <Loading/>
         }
-        {errors && !data && <div className='ks-error'>{errors}</div>}
+        {/* Gestion des erreurs de chargements */}
+        {errors && !data && <Error errors={errors}/>}
+        {/* Affichage des données */}
         {!loading && data && 
           <div>
-            <div className="ks-row ks-alignItemsTop ks-justifyContentCenter">
-              {data.map((logement, index) => (              
-                <div className="ks-col4" key={index}>
-                  <HomeCard 
-                    key={logement} 
-                    id={logement.id}
+            <div className="ks-home-cards">
+              {data.map((logement: { id: string; title: string; cover: string }) => (
+                <div className="ks-home-card-wrapper" key={logement.id}>
+                  <HomeCard
                     title={logement.title}
                     cover={logement.cover}
+                    id={logement.id}
                   ></HomeCard>
-                </div> ))
-              }
+                </div>
+              ))}
             </div>
           </div>
         }
       </div>
-    </Fragment>
+    </div>
   )
 }
 
