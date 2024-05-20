@@ -4,10 +4,12 @@ import { Fragment } from "react/jsx-runtime";
 function Navbar() {
   const links = [
     {
+      id: 0,
       pathname: '/home',
       title: 'Accueil'
     },
     {
+      id: 1,
       pathname: '/a-propos',
       title: 'À Propos'
     }
@@ -17,9 +19,9 @@ function Navbar() {
 
   return (
     <Fragment>
-      {links.map((link, index) => (
+      {links.map((link) => (
         <Link
-          key={index}
+          key={link.id}
           to={link.pathname}
           className={`ks-nav-link ${location.pathname === link.pathname ? 'active' : ''}`}
         >
