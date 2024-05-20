@@ -11,8 +11,8 @@ function Home() {
   return (
     <div className="ks-home">
       <div className="ks-chezVous">
-        <div className="ks-chezVous-img ks-row ks-alignItemsCenter ks-justifyContentCenter">
-            <div className="ks-chezVous-Text ks-col12">
+        <div className="ks-chezVous-img">
+            <div className="ks-chezVous-Text">
               Chez vous, partout et ailleurs
             </div>
         </div>
@@ -23,7 +23,7 @@ function Home() {
           <Loading/>
         }
         {/* Gestion des erreurs de chargements */}
-        {errors && !data && <Error errors={errors}/>}
+        {!loading && errors && !data && <Error errors={errors}/>}
         {/* Affichage des données */}
         {!loading && data && 
           <div>
