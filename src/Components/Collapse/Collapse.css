@@ -1,0 +1,56 @@
+.ks-collapse-section {
+	background-color: #FF6060;
+	cursor: pointer;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1.25rem;
+}
+
+.ks-collapse {
+	display: flex;
+	align-items: center;
+	height: 1.875rem;
+	width: auto;
+	padding-left: 0.75rem;
+	border: none;
+	transition: background-color 0.6s ease;
+}
+
+.ks-collapse-title {
+	color: #ffffff;
+	font-size: 0.8125rem;
+	font-weight: 500;
+	line-height: 142.6%;
+}
+
+.ks-collapse-icon {
+	width: 1.125rem;
+	height: 1.125rem;
+	margin-right: 0.375rem;
+	margin-left: auto;
+	transition: -webkit-transform 0.6s ease;
+	transition: transform 0.6s ease;
+}
+
+.ks-collapse-content {
+	overflow: hidden;
+	transition: max-height 0.6s ease;
+}
+
+.ks-collapse-text {
+	padding: 1.125rem 0.75rem;
+	background: #f7f7f7;
+	color: black;
+	font-size: 0.75rem;
+	line-height: 142.6%;
+}
+.ks-chevron {
+	left: 88%;
+	position: absolute;
+}
+
+.ks-chevron-fa {
+	transition: 0.5s transform;
+	color: white;
+}
