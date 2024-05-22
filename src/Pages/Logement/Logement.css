@@ -1,0 +1,88 @@
+.ks-logement-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.ks-logement-info-title {
+  color: #FF6060;
+  font-family: Montserrat;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+}
+
+.ks-logement-info-title-location {
+  color: #000;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+}
+
+.ks-logement-info-host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF6060;
+  text-align: right;
+  font-family: Montserrat;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 142.6%;
+}
+
+.ks-logement-info-host-picture img {
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  margin-left: 10px;
+  width: 64px;
+  height: 64px; 
+}
+
+.ks-logement-tags-tag {
+  width: 115px;
+  height: 25px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #FF6060;
+  color: #FFF;
+  text-align: center;
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 142.6%;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.ks-logement-tags-rating {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ks-logement-collapse {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.ks-logement-collapse-description,
+.ks-logement-collapse-equipements {
+  width: 582px; 
+}

@@ -1,0 +1,44 @@
+.caroussel {
+  margin-top:50px;
+	position: relative;
+}
+.caroussel,
+.image {
+	height: 15.9375rem;
+  overflow: hidden;
+}
+
+.image {
+	width: 100%;
+	object-fit: cover;
+	border-radius: 0.625rem;
+}
+
+.flechePrecedente,
+.flecheSuivante {
+	z-index: 1;
+	position: absolute;
+	top: 40%;
+	width: 46.68px;
+  height: 79.2px; 
+	cursor: pointer;
+}
+
+.flechePrecedente {
+	right: 0.3125rem;
+	transform: rotate(180deg);
+}
+
+.flecheSuivante {
+	left: 0.3125rem;
+}
+
+.slide {
+	transform: translateY(500px);
+	transition-duration: 1s;
+}
+.slide.active {
+  width: 100%;
+  transform: translateY(0);
+  transition-duration: 1s;
+}

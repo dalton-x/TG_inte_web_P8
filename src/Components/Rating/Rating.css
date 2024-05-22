@@ -1,0 +1,7 @@
+.ks-rating-star {
+  color: #E3E3E3;
+  margin: auto 3px;
+}
+.ks-rating-star.note {
+  color: #FF6060;
+}
