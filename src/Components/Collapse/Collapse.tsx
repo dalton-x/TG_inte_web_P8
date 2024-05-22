@@ -1,11 +1,26 @@
 import { useState, useRef } from 'react'
 
-function Collapse({ title, content }) {
+interface CollapseProps {
+  title: string;
+  content: string | string[];
+}
+
+function Collapse({ title, content }: Readonly<CollapseProps>) {
 	const [active, setActive] = useState('')
 	const [height, setHeight] = useState('0px')
   const [upDown, setUpDown] = useState('up')
 
 	const contentCollapse = useRef<HTMLDivElement>(null)
+
+	// Si le content n'est pas de type object
+	const contentArray = []
+	if (!Array.isArray(content)) {
+		contentArray.push(content)
+	} else {
+		for (const list of content) {
+				contentArray.push(list)
+		}
+	}
 
 	const toggleCollapse = () => {
 		setActive(active === '' ? 'active' : '');
@@ -37,7 +52,9 @@ function Collapse({ title, content }) {
 				className="ks-collapse-content"
 			>
 				<div className="ks-collapse-text">
-						{content}
+						{contentArray.map((item, index) => (
+							<div key={`${index}-${item}`}>{item}</div>
+						))}
 				</div>
 			</div>
 		</div>

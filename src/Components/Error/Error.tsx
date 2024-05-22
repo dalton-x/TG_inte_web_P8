@@ -1,10 +1,17 @@
-function Erreur(errors :Object) {
-
-  console.log(errors);
-  
-  return(
-    <div className='ks-error'>{errors.errors}</div>
-  )
+interface ErrorProps {
+  errors: string;
 }
 
-export default Erreur
+function Erreur({ errors }: Readonly<ErrorProps>) {
+  return (
+    <div className="ks-error">
+      {Object.entries(errors).map(([key, value]) => (
+        <div key={key} className="ks-error-item">
+          <p>{value}</p>
+        </div>
+      ))}
+    </div>
+  );
+}
+
+export default Erreur;

@@ -5,6 +5,7 @@ import Footer from './Components/Footer/Footer';
 import Home from './Pages/Home/Home';
 import NotFound from './Pages/NotFound/NotFound';
 import APropos from './Pages/APropos/APropos';
+import Logement from './Pages/Logement/Logement';
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/home" element={<Home />} />
             <Route path="/a-propos" element={<APropos />} />
+            <Route path="/logement/:idLogement" element={<Logement />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>

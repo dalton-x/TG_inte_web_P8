@@ -15,6 +15,7 @@
 	padding-left: 0.75rem;
 	border: none;
 	transition: background-color 0.6s ease;
+  position: relative;
 }
 
 .ks-collapse-title {
@@ -46,7 +47,7 @@
 	line-height: 142.6%;
 }
 .ks-chevron {
-	left: 88%;
+	right: 10px;
 	position: absolute;
 }
 

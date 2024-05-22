@@ -1,34 +1,28 @@
 import { useEffect, useState } from "react"
 
-function useFetch<T>(url: string, options: RequestInit = {}) {
+function useFetch<T>(url: string, dependencies = []) {
   const [loading, setLoading] = useState(true);
   const [response, setResponse] = useState<T | null>(null);
-  const [errors, setErrors] = useState('');
+  const [errors, setErrors] = useState<string>('');
 
   useEffect(() => {
-    fetch(url, {
-      ...options,
-      headers: {
-        'Accept': 'application/json; charset=UTF-8',
-        ...options.headers,
-      },
-    })
-    .then(response => response.json())
-    .then(response => {
-      setResponse(response);
-    })
-    .catch(() => {
-      setErrors('Erreur de chargement des logements');
-    })
-    .finally(() => {
-      setLoading(false);
-    });
-  }, [url, options]);
+    const fetchLogement = async () => {
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setResponse(data);
+        setLoading(false)
+      } catch (error) {
+        setErrors(error as string);
+      }
+    }
+    fetchLogement()
+  }, [url, dependencies])
 
   return {
-    loading,
+    loading: loading,
     data: response,
-    errors,
+    errors: errors,
   };
 }
 
