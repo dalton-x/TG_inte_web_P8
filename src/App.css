@@ -5,7 +5,10 @@
 @import url(./Components/Error/Error.css);
 @import url(./Components/Loading/Loading.css);
 @import url(./Components/Collapse/Collapse.css);
+@import url(./Components/Caroussel/Caroussel.css);
+@import url(./Components/Rating/Rating.css);
 
 @import url(./Pages/Home/Home.css);
 @import url(./Pages/NotFound/NotFound.css);
 @import url(./Pages/APropos/APropos.css);
+@import url(./Pages/Logement/Logement.css);
