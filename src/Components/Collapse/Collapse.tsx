@@ -6,11 +6,13 @@ interface CollapseProps {
 }
 
 function Collapse({ title, content }: Readonly<CollapseProps>) {
-	const [active, setActive] = useState('')
-	const [height, setHeight] = useState('0px')
-  const [upDown, setUpDown] = useState('up')
-
-	const contentCollapse = useRef<HTMLDivElement>(null)
+	const [state, setState] = useState({
+		active: '',
+		height: '0px',
+		upDown: 'up'
+	});
+	
+	const contentCollapse = useRef<HTMLDivElement>(null);
 
 	// Si le content n'est pas de type object
 	const contentArray = []
@@ -23,32 +25,37 @@ function Collapse({ title, content }: Readonly<CollapseProps>) {
 	}
 
 	const toggleCollapse = () => {
-		setActive(active === '' ? 'active' : '');
-		let newHeight = '';
-		if (active === 'active') {
-			newHeight = '0px';
-		} else if (contentCollapse.current) {
-			newHeight = `${contentCollapse.current.scrollHeight}px`;
-		}
-		setHeight(newHeight);
-		setUpDown(active === 'active' ? '0deg' : '-180deg');
+		setState(prevState => {
+			let newHeight = '0px';
+			if (prevState.active === 'active' && contentCollapse.current) {
+				newHeight = `${contentCollapse.current.scrollHeight}px`;
+			}
+			return {
+				active: prevState.active === '' ? 'active' : '',
+				height: newHeight,
+				upDown: prevState.active === 'active' ? '0deg' : '-180deg'
+			};
+		});
 	};
+
+	console.log('render', title);
+
 	return (
 		<div className="ks-collapse-section">
       <div onClick={toggleCollapse} role="button">
-        <div className={`ks-collapse ${active}`} >
+        <div className={`ks-collapse ${state.active}`} >
           <span className="ks-collapse-title">{title}</span> 
 					<div className="ks-chevron">
 						<i className="fa-solid fa-chevron-up ks-textWhite ks-chevron-fa"
 								style={{ 
-									transform: `rotate(${upDown})`
+									transform: `rotate(${state.upDown})`
 								}}></i>
 					</div>
         </div>
       </div>
 			<div
 				ref={contentCollapse}
-				style={{ maxHeight: `${height}` }}
+				style={{ maxHeight: `${state.height}` }}
 				className="ks-collapse-content"
 			>
 				<div className="ks-collapse-text">
