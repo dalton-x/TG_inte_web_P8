@@ -38,8 +38,6 @@ function Collapse({ title, content }: Readonly<CollapseProps>) {
 		});
 	};
 
-	console.log('render', title);
-
 	return (
 		<div className="ks-collapse-section">
       <div onClick={toggleCollapse} role="button">
