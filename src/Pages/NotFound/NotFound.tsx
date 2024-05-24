@@ -2,8 +2,7 @@ import { Link } from "react-router-dom"
 
 function NotFound() {
 
-  
-  document.title = 'Page non trouvée - Kasa'
+  document.title = `Page non trouvée - ${import.meta.env.VITE_APP_NAME}`
 
   return(
     <div className="ks-notFound">

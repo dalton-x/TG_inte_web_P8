@@ -5,7 +5,7 @@ function Menu( )
   return (
     <div className="ks-logo">
       <Link to="" >
-        <img src="src\assets\logo.png" alt="Logo" />
+        <img src={`${import.meta.env.VITE_BASE_URL}/static/assets/logo.png`} alt="Logo" />
       </Link>
     </div>
   )

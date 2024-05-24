@@ -1,7 +1,7 @@
 .ks-aPropos-img {
   margin-top: 38px;
   margin-bottom: 38px;
-  background-image: url('src/assets/APropos.jpg');
+  background-image: url('../../static/assets/APropos.jpg');
   border-radius: 25px;
   background-size: cover;
   mix-blend-mode: darken;

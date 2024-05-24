@@ -1,5 +1,5 @@
 import { useState } from "react"
-import fleche from '../../assets/flecheCaroussel.svg'
+import fleche from '../../static/assets/flecheCaroussel.svg'
 
 
 interface CarousselProps {
