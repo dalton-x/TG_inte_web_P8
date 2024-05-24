@@ -31,13 +31,13 @@ function Logement() {
   useEffect(() => {
     const fetchLogement = async () => {
       try {
-        const response = await fetch('../src/data/logements.json');
+        const response = await fetch(`${import.meta.env.VITE_BASE_URL}${import.meta.env.VITE_API}`);
         const data: Logement[] = await response.json();
         const selectLogement = data.find(({ id }) => id === idLogement);
         if (selectLogement) {
           setLogement(selectLogement);
           setImageCarrousel(selectLogement.pictures);
-          document.title = `Logement - ${selectLogement.title} - Kasa`;
+          document.title = `Logement - ${selectLogement.title} - ${import.meta.env.VITE_APP_NAME}`;
         } else {
           navigate('/404');
         }

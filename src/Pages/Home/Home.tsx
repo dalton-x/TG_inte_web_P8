@@ -10,9 +10,9 @@ interface LogementData {
 }
 
 function Home() {
-  const { loading, data, errors } = useFetch<LogementData[]>('src/data/logements.json');
+  const { loading, data, errors } = useFetch<LogementData[]>(`${import.meta.env.VITE_BASE_URL}${import.meta.env.VITE_API}`);  
   
-  document.title = 'Accueil - Kasa';
+  document.title = `Accueil - ${import.meta.env.VITE_APP_NAME}`;
   
   return (
     <div className="ks-home">

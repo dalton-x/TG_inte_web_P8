@@ -9,7 +9,7 @@
 }
 
 .ks-chezVous-img {
-  background-image: url('src/assets/chezVous.png');
+  background-image: url('../../static/assets/chezVous.png');
   border-radius: 25px;
   background-size: cover;
   mix-blend-mode: darken;
