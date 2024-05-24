@@ -9,7 +9,7 @@ function Collapse({ title, content }: Readonly<CollapseProps>) {
 	const [state, setState] = useState({
 		active: '',
 		height: '0px',
-		upDown: 'up'
+		upDown: 'down'
 	});
 	
 	const contentCollapse = useRef<HTMLDivElement>(null);
@@ -27,7 +27,7 @@ function Collapse({ title, content }: Readonly<CollapseProps>) {
 	const toggleCollapse = () => {
 		setState(prevState => {
 			let newHeight = '0px';
-			if (prevState.active === 'active' && contentCollapse.current) {
+			if (prevState.active !== 'active' && contentCollapse.current) {
 				newHeight = `${contentCollapse.current.scrollHeight}px`;
 			}
 			return {
