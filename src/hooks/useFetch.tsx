@@ -17,7 +17,7 @@ function useFetch<T>(url: string) {
       }
     }
     fetchLogement()
-  })
+  },[url])
 
   return {
     loading: loading,

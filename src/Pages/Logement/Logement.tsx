@@ -4,6 +4,7 @@ import { useState, useEffect } from 'react';
 import Loading from "../../Components/Loading/Loading";
 import Rating from "../../Components/Rating/Rating";
 import Collapse from "../../Components/Collapse/Collapse";
+import useFetch from "../../hooks/useFetch";
 
 interface Logement {
   id: string;
@@ -27,30 +28,36 @@ function Logement() {
 
   const [logement, setLogement] = useState<Logement | null>(null);
   const [imageCarrousel, setImageCarrousel] = useState<string[]>([]);
-
+  const { loading, data, errors } = useFetch<Logement[]>(`../${import.meta.env.VITE_API}`);
+ 
   useEffect(() => {
-    const fetchLogement = async () => {
-      try {
-        const response = await fetch(`../${import.meta.env.VITE_API}`);
-        const data: Logement[] = await response.json();
-        const selectLogement = data.find(({ id }) => id === idLogement);
-        if (selectLogement) {
-          setLogement(selectLogement);
-          setImageCarrousel(selectLogement.pictures);
-          document.title = `Logement - ${selectLogement.title} - ${import.meta.env.VITE_APP_NAME}`;
-        } else {
-          navigate('/404');
-        }
-      } catch (error) {
-        console.error(error);
+    if (data) {
+      const selectedLogement = data.find(({ id }) => id === idLogement);
+      if (selectedLogement) {
+        setLogement(selectedLogement);
+        setImageCarrousel(selectedLogement.pictures);
+        document.title = `Logement - ${selectedLogement.title} - ${
+          import.meta.env.VITE_APP_NAME
+        }`;
+      } else {
         navigate('/404');
       }
-    };
-    fetchLogement();
-  }, [idLogement, navigate]);
+    } else if (errors) {
+      navigate('/404');
+    }
+  }, [data, idLogement, navigate, errors]);
+
+  if (loading) {
+    return <Loading />;
+  }
+
+  if (errors) {
+    navigate('/404');
+    return null;
+  }
 
   if (!logement) {
-    return <Loading/>
+    return null;
   }
 
   return (
