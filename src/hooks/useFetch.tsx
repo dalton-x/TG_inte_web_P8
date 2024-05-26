@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react"
 
-function useFetch<T>(url: string, dependencies = []) {
+function useFetch<T>(url: string) {
   const [loading, setLoading] = useState(true);
   const [response, setResponse] = useState<T | null>(null);
   const [errors, setErrors] = useState<string>('');
@@ -17,7 +17,7 @@ function useFetch<T>(url: string, dependencies = []) {
       }
     }
     fetchLogement()
-  }, [url, dependencies])
+  })
 
   return {
     loading: loading,

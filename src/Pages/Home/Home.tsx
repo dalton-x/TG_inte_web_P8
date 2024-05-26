@@ -10,7 +10,7 @@ interface LogementData {
 }
 
 function Home() {
-  const { loading, data, errors } = useFetch<LogementData[]>(`${import.meta.env.VITE_BASE_URL}${import.meta.env.VITE_API}`);  
+  const { loading, data, errors } = useFetch<LogementData[]>(`${import.meta.env.VITE_API}`);  
   
   document.title = `Accueil - ${import.meta.env.VITE_APP_NAME}`;
   

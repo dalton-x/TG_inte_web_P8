@@ -31,7 +31,7 @@ function Logement() {
   useEffect(() => {
     const fetchLogement = async () => {
       try {
-        const response = await fetch(`${import.meta.env.VITE_BASE_URL}${import.meta.env.VITE_API}`);
+        const response = await fetch(`../${import.meta.env.VITE_API}`);
         const data: Logement[] = await response.json();
         const selectLogement = data.find(({ id }) => id === idLogement);
         if (selectLogement) {
