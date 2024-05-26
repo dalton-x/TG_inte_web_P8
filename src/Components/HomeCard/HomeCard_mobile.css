@@ -1,0 +1,16 @@
+@media screen and ( min-width:375px ) and ( max-width:800px)  {
+	/* .ks-cardLogement {
+	}
+
+	.ks-cardLogement:hover {
+	}
+	.ks-cardLogement-cover img {
+
+	} */
+	.ks-cardLogement-cover-title {
+		left: 40px;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+	} 
+}
