@@ -12,3 +12,7 @@
 @import url(./Pages/NotFound/NotFound.css);
 @import url(./Pages/APropos/APropos.css);
 @import url(./Pages/Logement/Logement.css);
+
+
+@import url(./Pages/Home/Home_mobile.css);
+@import url(./Components/HomeCard/HomeCard_mobile.css);
