@@ -1,11 +1,7 @@
 import { useState, useRef } from 'react'
+import CollapseInterface from "../../Interfaces/CollapseInterface"
 
-interface CollapseProps {
-  title: string;
-  content: string | string[];
-}
-
-function Collapse({ title, content }: Readonly<CollapseProps>) {
+function Collapse({ title, content }: Readonly<CollapseInterface>) {
 	const [state, setState] = useState({
 		active: '',
 		height: '0px',
