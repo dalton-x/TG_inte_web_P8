@@ -16,6 +16,7 @@
     height: 111px;
     border-radius: 10px;
     border: 1px solid #000;
+
     mix-blend-mode: darken;
   }
 
@@ -48,6 +49,7 @@
 
   .ks-chezVous-Text-ailleurs {
     display: flex;
+
   }
 
   .ks-home-card-wrapper {
