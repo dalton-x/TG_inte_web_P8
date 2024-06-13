@@ -34,3 +34,14 @@ header {
 .ks-nav-link.active {
   text-decoration-line: underline; 
 }
+
+
+@media screen and ( min-width:375px ) and ( max-width:800px)  {
+
+  header {
+
+    width: 335px;
+
+  }
+
+}

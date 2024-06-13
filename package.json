@@ -4,7 +4,7 @@
   "description": "projet N°8 du parcours Integrateur web OpenClassroom",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env REACT_APP_ENV=development vite",
+    "dev": "cross-env REACT_APP_ENV=development vite --host",
     "build": "tsc && vite build && cp -r src/static dist/",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"

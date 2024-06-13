@@ -7,6 +7,8 @@
 @import url(./Components/Collapse/Collapse.css);
 @import url(./Components/Caroussel/Caroussel.css);
 @import url(./Components/Rating/Rating.css);
+@import url(./Components/Menu/Menu.css);
+@import url(./Components/Navbar/Navbar.css);
 
 @import url(./Pages/Home/Home.css);
 @import url(./Pages/NotFound/NotFound.css);

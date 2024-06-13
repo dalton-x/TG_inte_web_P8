@@ -1,12 +1,13 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import { useNavigate, useParams } from "react-router-dom"
-import Caroussel from "../../Components/Caroussel/Caroussel";
-import { useState, useEffect } from 'react';
-import Loading from "../../Components/Loading/Loading";
-import Rating from "../../Components/Rating/Rating";
-import Collapse from "../../Components/Collapse/Collapse";
-import useFetch from "../../hooks/useFetch";
+import Caroussel from "../../Components/Caroussel/Caroussel"
+import { useState, useEffect } from 'react'
+import Loading from "../../Components/Loading/Loading"
+import Rating from "../../Components/Rating/Rating"
+import Collapse from "../../Components/Collapse/Collapse"
+import useFetch from "../../hooks/useFetch"
 
-interface Logement {
+interface LogementInterface {
   id: string;
   title: string;
   cover: string;
@@ -26,9 +27,9 @@ function Logement() {
   const { idLogement } = useParams();
   const navigate = useNavigate();
 
-  const [logement, setLogement] = useState<Logement | null>(null);
-  const [imageCarrousel, setImageCarrousel] = useState<string[]>([]);
-  const { loading, data, errors } = useFetch<Logement[]>(`../${import.meta.env.VITE_API}`);
+  const [logement, setLogement] = useState<LogementInterface | null>(null)
+  const [imageCarrousel, setImageCarrousel] = useState<string[]>([])
+  const { loading, data, errors } = useFetch<LogementInterface[]>(`../${import.meta.env.VITE_API}`)
  
   useEffect(() => {
     if (data) {
@@ -38,22 +39,17 @@ function Logement() {
         setImageCarrousel(selectedLogement.pictures);
         document.title = `Logement - ${selectedLogement.title} - ${
           import.meta.env.VITE_APP_NAME
-        }`;
+        }`
       } else {
-        navigate('/404');
+        navigate('/404')
       }
     } else if (errors) {
-      navigate('/404');
+      navigate('/404')
     }
-  }, [data, idLogement, navigate, errors]);
+  }, [data, errors])
 
   if (loading) {
-    return <Loading />;
-  }
-
-  if (errors) {
-    navigate('/404');
-    return null;
+    return <Loading />
   }
 
   if (!logement) {
@@ -95,7 +91,7 @@ function Logement() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
 export default Logement

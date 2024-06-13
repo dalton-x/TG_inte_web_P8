@@ -1,0 +1,15 @@
+@media screen and ( min-width:375px ) and ( max-width:800px)  {
+  .ks-logo img {
+    width: 145px;
+    height: 46.881px;
+    flex-shrink: 0; 
+  }
+
+  .ks-logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 26px;
+    flex: 1 0 0;
+  }
+}
