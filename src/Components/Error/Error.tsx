@@ -1,8 +1,6 @@
-interface ErrorProps {
-  errors: string;
-}
+import ErrorInterface from "../../Interfaces/ErrorInterface"
 
-function Erreur({ errors }: Readonly<ErrorProps>) {
+function Erreur({ errors }: Readonly<ErrorInterface>) {
   return (
     <div className="ks-error">
       {Object.entries(errors).map(([key, value]) => (

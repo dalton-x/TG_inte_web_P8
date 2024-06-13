@@ -6,22 +6,7 @@ import Loading from "../../Components/Loading/Loading"
 import Rating from "../../Components/Rating/Rating"
 import Collapse from "../../Components/Collapse/Collapse"
 import useFetch from "../../hooks/useFetch"
-
-interface LogementInterface {
-  id: string;
-  title: string;
-  cover: string;
-  pictures: string[];
-  description: string;
-  host: {
-    name: string;
-    picture: string;
-  };
-  rating: string;
-  location: string;
-  equipments: string[];
-  tags: string[];
-}
+import LogementInterface from "../../Interfaces/LogementInterface"
 
 function Logement() {
   const { idLogement } = useParams();

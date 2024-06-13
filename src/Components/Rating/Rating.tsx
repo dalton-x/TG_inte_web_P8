@@ -1,8 +1,6 @@
-interface RatingProps {
-  note: number;
-}
+import RatingInterface from "../../Interfaces/RatingInterface"
 
-function Rating({ note }: Readonly<RatingProps>) {
+function Rating({ note }: Readonly<RatingInterface>) {
   return (
     <div>
       {[...Array(5)].map((_, index) => (

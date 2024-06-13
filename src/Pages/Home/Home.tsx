@@ -2,15 +2,10 @@ import useFetch from "../../hooks/useFetch"
 import HomeCard from "../../Components/HomeCard/HomeCard"
 import Error from "../../Components/Error/Error"
 import Loading from "../../Components/Loading/Loading"
-
-interface LogementData {
-  id: string;
-  title: string;
-  cover: string;
-}
+import HomeInterface from "../../Interfaces/HomeInterface"
 
 function Home() {
-  const { loading, data, errors } = useFetch<LogementData[]>(`../${import.meta.env.VITE_API}`);  
+  const { loading, data, errors } = useFetch<HomeInterface[]>(`../${import.meta.env.VITE_API}`);  
   
   document.title = `Accueil - ${import.meta.env.VITE_APP_NAME}`;
   

@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
+import HomeCardInterface from "../../Interfaces/HomeCardInterface"
+
 
 HomeCard.propTypes = {
   id: PropTypes.string.isRequired,
@@ -7,13 +9,8 @@ HomeCard.propTypes = {
   cover: PropTypes.string.isRequired,
 }
 
-interface HomeCardProps {
-  title: string;
-  cover: string;
-  id: string;
-}
 
-function HomeCard(props: Readonly<HomeCardProps>) {
+function HomeCard(props: Readonly<HomeCardInterface>) {
   const { title, cover, id } = props;
 
   return(
