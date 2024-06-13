@@ -1,0 +1,16 @@
+@media screen and ( min-width:375px ) and ( max-width:800px)  {
+  header {
+    align-items: center;
+    margin: 20px auto 0 auto;
+    width: 335px;
+    height: 46.9px;
+  }
+
+  .ks-nav-link {
+    font-size: 12px;
+  }
+  .ks-nav {
+    gap: 26px;
+  }
+
+}

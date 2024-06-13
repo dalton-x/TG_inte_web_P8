@@ -19,7 +19,9 @@ function Home() {
       <div className="ks-chezVous">
         <div className="ks-chezVous-img">
             <div className="ks-chezVous-Text">
-              Chez vous, partout et ailleurs
+              <div className="ks-chezVous-Text-all">
+              Chez vous,<span className="ks-chezVous-Text-ailleurs">partout et ailleurs</span>
+              </div>
             </div>
         </div>
       </div>

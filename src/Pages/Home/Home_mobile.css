@@ -3,18 +3,26 @@
     margin: auto 15px;
   }
 
+  .ks-chezVous {
+    width: 335px;
+    margin: 0 auto 0 auto;
+    height: 111px;
+    flex-shrink: 0;
+  }
+
   .ks-chezVous-img {
     background-image: url('../../static/assets/chezVous.png');
-    width: 94vw;
+    width: 335px;
     height: 111px;
     border-radius: 10px;
     border: 1px solid #000;
-    opacity: 0.6;
+
     mix-blend-mode: darken;
   }
 
   .ks-chezVous-Text {
-    width: 94vw;
+    width: 335px;
+    height: 111px;
     color: #FFF;
     font-family: Montserrat;
     border-radius: 10px;
@@ -22,10 +30,26 @@
     font-style: normal;
     font-weight: 700;
     line-height: 100%;
-    padding-top: 45px;
-    padding-bottom: 43px;
+    padding-top: 0;
+    padding-bottom: 0;
     background-color: #000;
-    opacity: 0.9;
+    opacity: 0.6;
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    flex-direction: column;
+    width: 335px;
+    height: 111px;
+    flex-shrink: 0;
+  }
+
+  .ks-chezVous-Text-all {
+    padding-left: 16px;
+  }
+
+  .ks-chezVous-Text-ailleurs {
+    display: flex;
+
   }
 
   .ks-home-card-wrapper {
