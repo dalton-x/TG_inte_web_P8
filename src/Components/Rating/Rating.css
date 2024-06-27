@@ -5,3 +5,10 @@
 .ks-rating-star.note {
   color: #FF6060;
 }
+
+
+@media screen and (max-width: 475px) {
+  .ks-rating-star {
+    font-size: 17px;
+  }
+}

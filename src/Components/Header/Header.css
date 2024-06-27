@@ -35,13 +35,24 @@ header {
   text-decoration-line: underline; 
 }
 
-
-@media screen and ( min-width:375px ) and ( max-width:800px)  {
+@media screen and (max-width: 475px) {
 
   header {
-
     width: 335px;
-
+    margin-top: 0;
+    top:20px;
   }
 
+  .ks-logo {
+    left: 19.5px;
+  }
+
+  .ks-nav {
+    right: 19.5px;
+    gap: 15px;
+  }
+
+  .ks-nav-link {
+    font-size: 17px;
+  }
 }

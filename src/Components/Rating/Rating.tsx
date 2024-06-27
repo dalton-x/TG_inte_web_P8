@@ -1,4 +1,5 @@
 import RatingInterface from "../../Interfaces/RatingInterface"
+import "./Rating.css"
 
 function Rating({ note }: Readonly<RatingInterface>) {
   return (

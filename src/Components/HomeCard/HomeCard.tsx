@@ -2,6 +2,8 @@ import { Link } from "react-router-dom"
 import PropTypes from 'prop-types'
 import HomeCardInterface from "../../Interfaces/HomeCardInterface"
 
+import "./HomeCard.css"
+
 
 HomeCard.propTypes = {
   id: PropTypes.string.isRequired,

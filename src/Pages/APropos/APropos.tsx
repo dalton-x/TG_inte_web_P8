@@ -1,5 +1,6 @@
 import { Fragment } from "react/jsx-runtime"
 import Collapse from "../../Components/Collapse/Collapse"
+import './APropos.css'
 
 function APropos() {
   document.title = 'A propos - Kasa'

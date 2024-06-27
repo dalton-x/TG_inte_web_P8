@@ -42,3 +42,40 @@
   transform: translateY(0);
   transition-duration: 1s;
 }
+
+/*** Medias Queries ***/
+@media screen and (max-width: 992px) {
+  .flecheSuivante,
+  .flechePrecedente {
+    width: 1.167rem;
+    height: 1.98rem;
+  }
+
+	.active > img {
+		height: 350px;
+	}
+
+	.caroussel {
+		height: 15rem;
+		overflow: hidden;
+		margin-top: 0;
+	}
+}
+@media screen and (max-width: 475px) {
+  .caroussel {
+    width: 100%;
+    height: 10rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+  }
+
+	.active > img {
+		height: 235px;
+	}
+
+  .flecheSuivante,
+  .flechePrecedente {
+    width: 1.167rem;
+    height: 1.98rem;
+  }
+}

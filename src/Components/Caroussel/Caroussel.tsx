@@ -2,6 +2,8 @@ import { useState } from "react"
 import fleche from '../../static/assets/flecheCaroussel.svg'
 import CarousselInterface from "../../Interfaces/CarousselInterface.tsx"
 
+import "./Caroussel.css"
+
 function Caroussel({ images }: Readonly<CarousselInterface>) {
 	const [current, setCurrent] = useState(0)
 	const length = images.length

@@ -1,5 +1,7 @@
 import ErrorInterface from "../../Interfaces/ErrorInterface"
 
+import "./Error.css"
+
 function Erreur({ errors }: Readonly<ErrorInterface>) {
   return (
     <div className="ks-error">

@@ -86,3 +86,59 @@
 .ks-logement-collapse-equipements {
   width: 582px; 
 }
+
+
+/*** Medias Queries ***/
+@media screen and (max-width: 1439px) {
+
+}
+@media screen and (max-width: 575px) {
+
+}
+@media screen and (max-width: 750px) {
+  .ks-logement-info {
+    flex-direction: column;
+  }
+
+  .ks-logement-host-rating {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .ks-logement-tags-tag {
+    font-size: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    width: 95px;
+    height: 15px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    margin-left: 0;
+    border-radius: 5px;
+  }
+
+  .ks-logement-info-host-name {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .ks-logement-info-title {
+    font-size: 18px; 
+  }
+
+  .ks-logement-info-title-location {
+    font-size: 14px; 
+  }
+
+  .ks-logement-info-host-picture > img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 0;
+  }
+  .ks-logement-collapse-description, .ks-logement-collapse-equipements {
+    width: 100%;
+	}
+
+}
