@@ -4,6 +4,8 @@ import Error from "../../Components/Error/Error"
 import Loading from "../../Components/Loading/Loading"
 import HomeInterface from "../../Interfaces/HomeInterface"
 
+import "./Home.css"
+
 function Home() {
   const { loading, data, errors } = useFetch<HomeInterface[]>(`../${import.meta.env.VITE_API}`);  
   

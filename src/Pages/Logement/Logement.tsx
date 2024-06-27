@@ -8,6 +8,8 @@ import Collapse from "../../Components/Collapse/Collapse"
 import useFetch from "../../hooks/useFetch"
 import LogementInterface from "../../Interfaces/LogementInterface"
 
+import "./Logement.css"
+
 function Logement() {
   const { idLogement } = useParams();
   const navigate = useNavigate();
@@ -45,22 +47,26 @@ function Logement() {
     <div className="ks-logement">
       <Caroussel images={imageCarrousel} />
       <div className="ks-logement-info">
-        <div className="ks-logement-info-title">{logement.title}
-          <div className="ks-logement-info-title-location">{logement.location}</div>
+        <div className="ks-logement-info-title-tags">
+          <div className="ks-logement-info-title">{logement.title}
+            <div className="ks-logement-info-title-location">{logement.location}</div>
+          </div>
+          <div className="ks-logement-tags">
+            {logement.tags.map((tag, index) =>(
+              <span className="ks-logement-tags-tag"  key={`${index}-${tag}`}>{tag}</span>
+            ))}
+          </div>
         </div>
-        <div className="ks-logement-info-host">
-          <div className="ks-logement-info-host-name">{logement.host.name}</div>
-          <div className="ks-logement-info-host-picture"><img src={logement.host.picture} alt="" /></div>
-        </div>
-      </div>
-      <div className="ks-logement-tags-rating">
-        <div className="ks-logement-tags">
-          {logement.tags.map((tag, index) =>(
-            <span className="ks-logement-tags-tag"  key={`${index}-${tag}`}>{tag}</span>
-          ))}
-        </div>
-        <div className="ks-logement-rating">
-          <Rating note={parseInt(logement.rating)}/>
+        <div className="ks-logement-host-rating">
+          <div className="ks-logement-info-host">
+            <div className="ks-logement-info-host-name">{logement.host.name}</div>
+            <div className="ks-logement-info-host-picture">
+              <img src={logement.host.picture} alt="" />
+            </div>
+          </div>
+          <div className="ks-logement-rating">
+            <Rating note={parseInt(logement.rating)}/>
+          </div>
         </div>
       </div>
       <div className="ks-logement-collapse">

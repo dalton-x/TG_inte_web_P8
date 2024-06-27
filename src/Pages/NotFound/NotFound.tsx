@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom"
 
+import "./NotFound.css"
+
 function NotFound() {
 
   document.title = `Page non trouvée - ${import.meta.env.VITE_APP_NAME}`

@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom"
 import { Fragment } from "react/jsx-runtime";
+import "./Navbar.css"
 
 function Navbar() {
   const links = [

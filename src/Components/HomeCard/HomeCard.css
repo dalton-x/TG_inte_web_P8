@@ -29,3 +29,12 @@
 	width: 77%;
 	font-family: Montserrat;
 } 
+
+@media screen and (max-width:475px)  {
+	.ks-cardLogement-cover-title {
+		left: 10px;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+	} 
+}

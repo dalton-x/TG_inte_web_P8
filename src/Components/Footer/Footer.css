@@ -33,3 +33,17 @@ footer {
   font-weight: 500;
   line-height: 142.6%;
 }
+
+@media screen and (max-width: 750px) {
+  footer {
+    gap: 0;
+  }
+  footer > img {
+    width: 134px;
+  }
+  footer > p {
+    width: 133.594px;
+    height: 46px;
+    font-size: 12px;
+  }
+}
