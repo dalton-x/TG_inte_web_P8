@@ -1,5 +1,5 @@
-import Menu from "../Menu/Menu";
-import Navbar from "../Navbar/Navbar";
+import Menu from "../../Menu/Menu";
+import Navbar from "../../Navbar/Navbar";
 import "./Header.css"
 
 function Header() {  

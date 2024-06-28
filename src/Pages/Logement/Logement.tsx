@@ -2,7 +2,7 @@
 import { useNavigate, useParams } from "react-router-dom"
 import Caroussel from "../../Components/Caroussel/Caroussel"
 import { useState, useEffect } from 'react'
-import Loading from "../../Components/Loading/Loading"
+import Loading from "../../Components/Core/Loading/Loading"
 import Rating from "../../Components/Rating/Rating"
 import Collapse from "../../Components/Collapse/Collapse"
 import useFetch from "../../hooks/useFetch"
