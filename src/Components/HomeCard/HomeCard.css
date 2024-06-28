@@ -37,4 +37,30 @@
 		font-style: normal;
 		font-weight: 700;
 	} 
+
+	.ks-cardLogement-cover img {
+		width: 100%;
+		min-height: 340px;
+	}
+}
+
+@media screen and (min-width:476px) and (max-width:830px)  {
+	.ks-cardLogement-cover-title {
+		left: 10px;
+		font-size: 18px;
+		font-style: normal;
+		font-weight: 700;
+	} 
+
+	.ks-cardLogement-cover img {
+		width: 100%;
+		min-height: 340px;
+	}
+}
+
+@media screen and (min-width:831px) and (max-width:1240px)  {
+	.ks-cardLogement-cover img {
+		width: 100%;
+		min-height: 340px;
+	}
 }

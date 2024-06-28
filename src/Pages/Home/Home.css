@@ -73,6 +73,11 @@
     margin: auto 0px;
   }
 
+  .ks-container.ks-home {
+		padding: 0;
+    margin-top: 20px;
+	}
+
   .ks-chezVous {
     width: 100%;
     margin: 0 auto 0 auto;
@@ -123,4 +128,25 @@
   .ks-home-card-wrapper {
     width: calc(100% - 20px);
   }
+
+  .ks-home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width:476px) and (max-width:830px)  {
+
+
+  .ks-home-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .ks-home-card-wrapper {
+    width: calc(60.33% - 20px);
+  }
+  
 }
