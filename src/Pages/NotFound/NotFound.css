@@ -1,35 +1,6 @@
-/* .ks-text404 {
-  color: #FF6060;
-  text-align: center;
-  font-size: 288px;
-  font-weight: 700;
-}
-
-.ks-textOups {
-  color: #FF6060;
-  font-size: 36px;
-  font-weight: 500;
-}
-
-.ks-textLinkHome a {
-  color: #000;
-  font-size: 18px;
-  font-weight: 500;
-  text-decoration: underline;
-}
-
-.ks-text404,
-.ks-textOups,
-.ks-textLinkHome {
-  font-style: normal;
-  font-family: Montserrat;
-  line-height: 142.6%;
-} */
-
 .ks-notFound {
   display: flex;
-  width: 1440px;
-  padding-top: 40px;
+  width: 1240px;
   flex-direction: column;
   align-items: center;
   gap: 139px;
@@ -75,4 +46,28 @@
 
 .ks-notFound-link:visited {
   color: #000;
+}
+
+
+@media screen and ( max-width:1240px)  {
+  .ks-notFound {
+    width: 100%;
+    gap: 113px;
+    padding-top: 0; 
+    padding-bottom: 113px;
+  }
+
+  .ks-notFound-404 {
+    font-size: 96px;
+  }
+
+  .ks-notFound-text {
+    font-size: 18px;
+    text-align: center;
+    width: 80%;
+  }
+
+  .ks-notFound-link, .ks-notFound-link>a:visited {
+    color: #000;
+  }
 }
