@@ -88,13 +88,6 @@
 }
 
 
-/*** Medias Queries ***/
-@media screen and (max-width: 1439px) {
-
-}
-@media screen and (max-width: 575px) {
-
-}
 @media screen and (max-width: 750px) {
   .ks-logement-info {
     flex-direction: column;
@@ -141,4 +134,11 @@
     width: 100%;
 	}
 
+}
+
+@media screen and ( max-width:1240px)  {
+  .ks-logement-collapse-description,
+  .ks-logement-collapse-equipements {
+    width: 100%; 
+  }
 }

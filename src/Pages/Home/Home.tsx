@@ -1,7 +1,7 @@
 import useFetch from "../../hooks/useFetch"
 import HomeCard from "../../Components/HomeCard/HomeCard"
 import Error from "../../Components/Error/Error"
-import Loading from "../../Components/Loading/Loading"
+import Loading from "../../Components/Core/Loading/Loading"
 import HomeInterface from "../../Interfaces/HomeInterface"
 
 import "./Home.css"
