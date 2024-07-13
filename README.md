@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# KASA
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Ce projet est une application React du projet 8 de la formation Integrateur web OpenClassrooms.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+1. Clonez le dépôt Git du projet :
+git clone https://github.com/votre-utilisateur/mon-projet-react.git
+2. Accédez au répertoire du projet :
+```bach
+cd TG_INTE_WEB_P8
+```
+3. Installez les dépendances du projet :
+```bach
+npm install
+```
+## Configuration des variables d'environnement
 
-## Expanding the ESLint configuration
+Le projet utilise des variables d'environnement pour stocker des informations sensibles, comme des clés d'API ou des paramètres de connexion à une base de données. Un fichier `.env.example` est fourni dans le dépôt pour vous guider sur les variables d'environnement nécessaires.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+1. Créez un nouveau fichier `.env` à la racine du projet en vous basant sur le fichier `.env.example` :
+```bach
+cp .env.example .env
+```
+2. Ouvrez le fichier `.env` et renseignez les valeurs appropriées pour chaque variable d'environnement, par exemple :
+```env
+VITE_APP_NAME=Le nom de votre application
+VITE_REACT_APP_ENV=Mettre dev ou prod
+VITE_BASE_URL=src/
+VITE_API=Lien vers votre api
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+## Démarrage du projet
+
+Une fois les dépendances installées et les variables d'environnement configurées, vous pouvez démarrer l'application en exécutant la commande suivante :
+```bach
+npm run dev
+```
+Cela lancera l'application en mode développement sur `http://localhost:5173`.
